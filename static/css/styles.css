@@ -1,0 +1,204 @@
+
+h1 {
+  font-size: 300%;
+  padding: 0.3%;
+  font-family: font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+h2 {
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 150%;
+  padding: 6% 2% 6%;
+  font-weight: 600;
+}
+
+h4 {
+}
+
+h5 {
+  text-align: left;
+  font-family: font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+
+}
+
+h6 {
+  color: white;
+}
+
+p {
+  font-size: 100%;
+  font-family:Lora,'Times New Roman',serif
+}
+
+
+.btn {
+  margin: 30px;
+  font-size: 180%;
+  text-align: center;
+}
+
+/* background: linear-gradient(45deg, #000850 0%, #000320 100%), radial-gradient(100% 225% at 100% 0%, #FF6928 0%, #000000 100%), linear-gradient(225deg, #FF7A00 0%, #000000 100%), linear-gradient(135deg, #CDFFEB 10%, #CDFFEB 35%, #009F9D 35%, #009F9D 60%, #07456F 60%, #07456F 67%, #0F0A3C 67%, #0F0A3C 100%);
+background-blend-mode: screen, overlay, hard-light, normal; */
+
+.masthead {
+
+}
+
+hr {
+  margin: 30px 160px 30px;
+}
+
+.logo {
+  color: red;
+}
+
+.container {
+  padding: 0;
+  text-align: center;
+}
+
+.subheading{
+  font-size: 130%;
+  color: #C0C0C0;
+  text-align: center;
+}
+
+.site-heading {
+  text-align: center;
+  color: white;
+  padding: 10% 17% 20%;
+}
+
+#footer {
+  text-align: center;
+  padding: 3%;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+  padding-left: 10px;
+}
+
+#contact {
+    padding: 3%;
+}
+
+
+.socials {
+  font-size: 150%;
+  padding: 5px 7px 10px;
+  text-decoration: none;
+  color: white;
+
+}
+
+.filters {
+ text-align: left;
+ font-size: 100%;
+ position: relative;
+ height: 800px;
+ overflow-y: scroll;
+}
+
+.cafe_list {
+ position: relative;
+ overflow-y: scroll;
+ height: 800px;
+}
+
+
+#features{
+    position: relative;
+    padding: 5% 13% 7%;
+
+}
+
+#writing{
+    text-align: center;
+    padding: 4% 25%;
+    font-family:Lora,'Times New Roman',serif
+
+}
+
+.icon {
+  font-size: 250%;
+  padding-top: 3px;
+  padding-bottom: 10px;
+}
+
+#mainNav .nav-link {
+  color: white;
+  font-size: 90%;
+  padding-left: 2px;
+}
+
+#mainNav .navbar-brand {
+  color: white;
+  font-size: 150%;
+  padding: 5px 17px;
+}
+
+#mainNav .nav-button {
+  color: white;
+}
+
+#grey-section {
+  padding: 1% 11% 4%;
+  text-align: center;
+}
+
+.community {
+  padding: 3% 11% 5%;
+  text-align: center;
+}
+
+#grey-section img {
+  height: 400px;
+}
+
+.card-text {
+  text-align: center;
+  font-size: 110%;
+  font-family:Lora,'Times New Roman',serif
+}
+
+.card-title {
+  padding: 15px 0;
+}
+
+.card-body {
+  padding: 0%;
+  margin: 0px;
+}
+
+.img-fluid {
+  height: 120px;
+  width: 150px;
+  object-fit: cover;
+}
+
+.btn-filter {
+  outline: none;
+  display: inline-block;
+  transition-duration: 0.4s;
+  text-align: left;
+  font-size: 80%;
+  padding: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.btn-filter:hover {
+  background-color: #F2F3F4;
+}
+
+.new_cafe {
+  padding: 3% 50% 12% 2%;
+  text-align: left;
+}

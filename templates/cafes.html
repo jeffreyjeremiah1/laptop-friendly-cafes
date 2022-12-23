@@ -1,0 +1,207 @@
+
+{% include "header.html" %}
+
+{% block content %}
+<div class="container-fluid scrollable">
+    <div class="row">
+    <!--  first-->
+
+        <div class="position-relative col-lg-3 col-md-4 filters mt-4" >
+            <h2>FILTERS</h2>
+            <div class="col mt-4">
+                <h5>MY PLACES</h5>
+                <div class="col">
+                    <i class="fas fa-heart"></i>
+                    <p>Liked</p>
+                </div>
+
+                <h5>PRODUCTIVITY</h5>
+                <div class="row">
+                   <button class="btn btn-filter" data-criteria="wifi" data-toggle="button" style="width: 40px;">
+                        <i class="fa fa-fw fa-wifi"></i>
+                        <br>
+                        <span title="Stable Wi-Fi">Wi-Fi</span>
+                    </button>
+                  <div class="col">
+                      <i class="fas fa-plug"></i>
+                      <p>Sockets</p>
+                  </div>
+                  <div class="col">
+                      <i class="fas fa-user-clock"></i>
+                      <p>Long Stay</p>
+                  </div>
+                  <div class="col">
+                      <i class="fas fa-pen-square"></i>
+                      <p>Tables</p>
+                  </div>
+                  <div class="col">
+                      <i class="fas fa-volume-down"></i>
+                      <p>Quiet</p>
+                  </div>
+                  <div class="col">
+                      <i class="fas fa-headset"></i>
+                      <p>Calls</p>
+                  </div>
+                </div>
+
+                <h5>COMMUNITY</h5>
+                <div class="row">
+                  <div class="col">
+                      <i class="fas fa-laptop"></i>
+                      <p>Work vibe</p>
+                  </div>
+                  <div class="col">
+                      <i class="fas fa-users"></i>
+                      <p>Groups</p>
+                  </div>
+                </div>
+
+                <h5>SERVICE</h5>
+                <div class="row">
+                  <div class="col">
+                      <i class="fas fa-coffee"></i>
+                      <p>Coffee</p>
+                  </div>
+                  <div class="col">
+                      <i class="fas fa-utensils"></i>
+                      <p>Food</p>
+                  </div>
+                  <div class="col">
+                      <i class="fas fa-leaf"></i>
+                      <p>Veggie</p>
+                  </div>
+                  <div class="col">
+                      <i class="fas fa-glass-martini-alt"></i>
+                      <p>Alcohol</p>
+                  </div>
+                  <div class="col">
+                      <i class="fas fa-credit-card"></i>
+                      <p>Cards</p>
+                  </div>
+                </div>
+                <h5>SPACE</h5>
+                 <div class="row">
+                  <div class="col">
+                      <i class="fas fa-sun"></i>
+                      <p>Light</p>
+                  </div>
+                  <div class="col">
+                      <i class="fas fa-tree"></i>
+                      <p>Outdoor</p>
+                  </div>
+                  <div class="col">
+                      <i class="fas fa-arrows-alt"></i>
+                      <p>Spacious</p>
+                  </div>
+                  <div class="col">
+                      <i class="fas fa-toilet-paper"></i>
+                      <p>Restroom</p>
+                  </div>
+                  <div class="col">
+                      <i class="fas fa-wheelchair"></i>
+                      <p>Accessible</p>
+                  </div>
+                  <div class="col">
+                      <i class="fas fa-thermometer-half"></i>
+                      <p>A/C</p>
+                  </div>
+                  <div class="col">
+                      <i class="fas fa-smoking-ban"></i>
+                      <p>No smoke</p>
+                  </div>
+                  <div class="col">
+                      <i class="fas fa-dog"></i>
+                      <p>Pets</p>
+                  </div>
+                  <div class="col">
+                      <i class="fas fa-car"></i>
+                      <p>Parking</p>
+                  </div>
+
+                 </div>
+           </div>
+        </div>
+
+    <!--  second-->
+
+    <div class=" col-lg-5 col-md-4 ">
+        <h1>CYPRUS</h1>
+        <div class="cafe_list">
+
+        <p>The best work and study-friendly cafes, restaurants and hotel lobbies in Cyprus. Find venues with free and reliable Wi-Fi hotspots, ample power sockets, and comfy seating areas.</p>
+        <h3>20 BEST WORK-FRIENDLY PLACES</h3>
+        {% for cafe in all_cafes: %}
+        <div class="card mb-4" >
+            <div class="row g-0">
+                <div class="col-lg-4" >
+                    <img alt="..." class="img-fluid rounded-start" src="{{ cafe.img_url }}">
+                </div>
+                <div class="col-lg-8">
+                    <div class="" style="">
+                        <p class="">{{ cafe.name }}</p>
+                        <p>06:00 - 10:00</p>
+                        <p class=""><small class="text-muted"><span><i class="fas fa-location-arrow"></i></span> {{ cafe.location }}</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+       {% endfor %}
+
+        <div class="card mb-4" >
+            <a class="btn btn-filter" data-criteria="wifi" data-toggle="button"  href="{{url_for('add_cafe')}}">
+                <div class="row g-0">
+                    <div class="col-lg-4 img-fluid p-4" style="background-color: #F2F3F4; text-align: center;">
+                        <i class="fas fa-plus-circle fa-5x"></i>
+                    </div>
+                    <div class="col-lg-8 px-4">
+                        <div class="" style="">
+                            <p class=""> SUGGEST A VENUE</p>
+                            <p> WORK FROM YOUR NEIGHBORHOOD</p>
+                            <p class=""><small class="text-muted"><span><i class="fas fa-location-arrow"></i></span> location</small></p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+
+       </div>
+    </div>
+
+
+    <!--  third-->
+    <div class=" col-lg-4 col-md-4">
+        <style >
+          * {
+            margin: 0;
+            padding: 0;
+          }
+          #map {
+            height: 850px;
+            width: 100%;
+          }
+        </style>
+
+        <div id="map"></div>
+            <script >
+              function initMap() {
+                var location = {lat: -23.31560, lng: +17.08585};
+                var map = new google.maps.Map(document.getElementById("map"), {
+                  zoom: 7,
+                  center: location
+                });
+                var marker = new google.maps.Marker({
+                  position: location,
+                  map: map,
+                });
+              }
+            </script>
+            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9NqgqvaV4MvcRvzaKtHWIFjpitvnV3bU&callback=initMap"></script>
+    </div>
+
+
+ </div>
+</div>
+</div>
+
+{% endblock %}
